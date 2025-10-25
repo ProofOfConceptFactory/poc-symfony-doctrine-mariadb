@@ -53,7 +53,7 @@ jobs:
         run: bin/console doctrine:migrations:migrate --no-interaction --env=test
 
       - name: Insert data with symfony command in test env
-        run: bin/console doctrine:query:sql "INSERT INTO dummy (name) VALUES ('Foo'), ('Bar'), ('Baz');" --env=test
+        run: bin/console dbal:run-sql "INSERT INTO dummy (name) VALUES ('Foo'), ('Bar'), ('Baz');" --env=test
 
       - name: Run phpunit
         run: SYMFONY_DEPRECATIONS_HELPER=disabled bin/phpunit
