@@ -16,7 +16,7 @@ jobs:
     services:
       # https://hub.docker.com/_/postgres/
       postgresql:
-        image: mariadb:12
+        image: mariadb:13
         env:
           MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: yes
         ports:
